@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="PowerPlanToggler.exe" version="1.0.0.0" publicKeyToken="d3a50229619dd7f0" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="PowerPlanToggler" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="PowerPlanToggler.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PowerPlanToggler.exe" size="15336">
+      <assemblyIdentity name="PowerPlanToggler" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>ymfujKLaxSdL2cntnSf04rOyvborWQ7PExNEmZGoqnM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="PowerPlanToggler.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Icon1.ico" size="4286">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8gei68Klz6M2xFXNDyTbhLdzNcnIpMOGC9tvy3Uk1XI=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-6LNVCOS\Andrew" issuerKeyHash="7c0d7f4244674ed114b461beb02cfe5811efc5a6" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>izMGLwbI26R6Iu4MQ30GtNTWVwF1fTzYE+en9iygvMY=</DigestValue></Reference></SignedInfo><SignatureValue>nafbDC4g51sgJOwGdm/Jm1aqPBlOZzTNBDXXiS3vcp0mqqteNIAdA4LkuJVUXlOUupzsB2Swrvzm3lA0hID579IebveMPxNxRfyURsvNp4leNE5IM91uNVU1zVzffXnh0uta55SbZYk3MwcGAC7U/H/1Vw/oQos+/Q+ni9FXQg0=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>o5N8sbjGUvUhixjEjGgnDcM5mz2KVS8pjwuDKdKH+Jq6YVl9B557ehQMVKyJeqrDGXavwcDd8l6TBCRyP5OJh3TA/fjOwG5aUeA4onEUwsPmSshZ4cs5LXOmS4dPpvcGQCvNHVFOoAIHN0iOUHXNomZsYto54GM6HGGg3UPz08U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="c6bca02cf6a7e713d83c7d750157d6d4b4067d430cee227aa4dbc8062f06338b" Description="" Url=""><as:assemblyIdentity name="PowerPlanToggler.exe" version="1.0.0.0" publicKeyToken="d3a50229619dd7f0" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-6LNVCOS\Andrew</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>FzlHUi57Tz3cqVY3TNQN9yH2naMxy0NAQylMDhZ5g7Y=</DigestValue></Reference></SignedInfo><SignatureValue>FMbhr1HVHA4qW2R2mk59JD3izIn5gBtT9FY9poscYTg7VCIiREb1loOHHeUlHr8Wux4p3UXAof0VTO26i4dNRfbg9aCYBE3plSEHcAZP74o35e75U3d2pUE9LpBY6t0WA74UUddkJ/REZdcEmfKtAqOjB8DOPg5of8Vh3SLdBs4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>o5N8sbjGUvUhixjEjGgnDcM5mz2KVS8pjwuDKdKH+Jq6YVl9B557ehQMVKyJeqrDGXavwcDd8l6TBCRyP5OJh3TA/fjOwG5aUeA4onEUwsPmSshZ4cs5LXOmS4dPpvcGQCvNHVFOoAIHN0iOUHXNomZsYto54GM6HGGg3UPz08U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB8TCCAVqgAwIBAgIQYqSkaYaH2rlGHc/T0XJLgjANBgkqhkiG9w0BAQsFADA3MTUwMwYDVQQDHiwARABFAFMASwBUAE8AUAAtADYATABOAFYAQwBPAFMAXABBAG4AZAByAGUAdzAeFw0xNjAxMDcyMjU4NTNaFw0xNzAxMDcwNDU4NTNaMDcxNTAzBgNVBAMeLABEAEUAUwBLAFQATwBQAC0ANgBMAE4AVgBDAE8AUwBcAEEAbgBkAHIAZQB3MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCjk3yxuMZS9SGLGMSMaCcNwzmbPYpVLymPC4Mp0of4mrphWX0Hnnt6FAxUrIl6qsMZdq/BwN3yXpMEJHI/k4mHdMD9+M7AblpR4DiicRTCw+ZKyFnhyzktc6ZLh0+m9wZAK80dUU6gAgc3SI5Qdc2iZmxi2jngYzocYaDdQ/PTxQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAIxboAwBrehlquibfCjZteq3yphOAwyDJTDLCyNvOLZOuxMTPWV8kJFq3eJjmVhR8wX7P5Sc3Swr4qAeDYrgu0lBOYpVFBTb2IACf2iwf235z6F38Z1frCEWh8opSGQRWmcaVfiuDPCh1KhZauz7FdpKn6Ik6DXmdx/bvtooXSzK</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

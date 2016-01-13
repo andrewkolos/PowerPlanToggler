@@ -1,0 +1,12 @@
+C:\Users\Andrew\Google Drive\College\Programming Practice\PowerPlanToggler\PowerPlanToggler\bin\Debug\PowerPlanToggler.exe.config
+C:\Users\Andrew\Google Drive\College\Programming Practice\PowerPlanToggler\PowerPlanToggler\bin\Debug\PowerPlanToggler.exe
+C:\Users\Andrew\Google Drive\College\Programming Practice\PowerPlanToggler\PowerPlanToggler\bin\Debug\PowerPlanToggler.pdb
+C:\Users\Andrew\Google Drive\College\Programming Practice\PowerPlanToggler\PowerPlanToggler\obj\Debug\PowerPlanToggler.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\Google Drive\College\Programming Practice\PowerPlanToggler\PowerPlanToggler\obj\Debug\PowerPlanToggler.Properties.Resources.resources
+C:\Users\Andrew\Google Drive\College\Programming Practice\PowerPlanToggler\PowerPlanToggler\obj\Debug\PowerPlanToggler.csproj.GenerateResource.Cache
+C:\Users\Andrew\Google Drive\College\Programming Practice\PowerPlanToggler\PowerPlanToggler\obj\Debug\PowerPlanToggler.exe
+C:\Users\Andrew\Google Drive\College\Programming Practice\PowerPlanToggler\PowerPlanToggler\obj\Debug\PowerPlanToggler.pdb
+C:\Users\Andrew\Google Drive\College\Programming Practice\PowerPlanToggler\PowerPlanToggler\bin\Debug\PowerPlanToggler.exe.manifest
+C:\Users\Andrew\Google Drive\College\Programming Practice\PowerPlanToggler\PowerPlanToggler\bin\Debug\PowerPlanToggler.application
+C:\Users\Andrew\Google Drive\College\Programming Practice\PowerPlanToggler\PowerPlanToggler\obj\Debug\PowerPlanToggler.exe.manifest
+C:\Users\Andrew\Google Drive\College\Programming Practice\PowerPlanToggler\PowerPlanToggler\obj\Debug\PowerPlanToggler.application
