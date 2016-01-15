@@ -22,7 +22,7 @@ namespace PowerPlanToggler
             Application.Run(new CustomApplicationContext());
         }
 
-        
+
     }
 
     public class CustomApplicationContext : ApplicationContext
@@ -31,6 +31,7 @@ namespace PowerPlanToggler
 
         public CustomApplicationContext()
         {
+            // Create tray icon.
             trayIcon = new NotifyIcon();
             trayIcon.Icon = PowerPlanToggler.Properties.Resources.Icon1;
             trayIcon.ContextMenu = IntializeContextMenu();
@@ -38,22 +39,21 @@ namespace PowerPlanToggler
             trayIcon.MouseClick += TrayIcon_MouseClick;
         }
 
+        // Use reflection to open the icon's context menu with left click.
         private void TrayIcon_MouseClick(object sender, MouseEventArgs e)
         {
             MethodInfo mi = typeof(NotifyIcon).GetMethod("ShowContextMenu", BindingFlags.Instance | BindingFlags.NonPublic);
             mi.Invoke((sender as NotifyIcon), null);
         }
 
-        void TogglePlan(object sender, EventArgs e)
-        {
-        }
-
+        // Exits the application.
         void Exit(object sender, EventArgs e)
         {
             trayIcon.Visible = false;
             Application.Exit();
         }
 
+        // Builds and returns a ContextMenu for the tray icon, including menu items for each power plan, one to allow the program to run at startup, and one to exit the program.
         ContextMenu IntializeContextMenu()
         {
             ContextMenu ret = new ContextMenu();
@@ -69,16 +69,16 @@ namespace PowerPlanToggler
             process.StartInfo = startInfo;
             process.Start();
 
-
             System.IO.StreamReader output = process.StandardOutput;
 
             process.WaitForExit();
 
-            // lol wtf is this
+            // read first three lines of powercfg command to get to the list of power plans
             output.ReadLine();
             output.ReadLine();
             output.ReadLine();
 
+            // read all power plans
             while (!output.EndOfStream)
             {
                 String line = output.ReadLine();
@@ -87,24 +87,27 @@ namespace PowerPlanToggler
                 pmi.PlanName = line.Substring(line.IndexOf('(') + 1, line.IndexOf(')') - line.IndexOf('(') - 1);
                 pmi.Name = pmi.PlanName;
                 pmi.Text = pmi.PlanName;
-                pmi.Checked = line.EndsWith("*");
+                pmi.Checked = line.EndsWith("*"); // * indicates that this is the active power plan
                 pmi.Click += Pmi_Click;
                 ret.MenuItems.Add(pmi);
-
             }
 
+            // Menu item for running at startup.
             MenuItem runAtStartupItem = new MenuItem("Run At Startup");
 
             RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-            runAtStartupItem.Checked = IsStartupItem(rkApp);
             runAtStartupItem.Click += RunAtStartupItem_Click;
+            //runAtStartupItem.Checked = IsStartupItem(rkApp); does not properly update the Checked property for some unkown reason
+            runAtStartupItem.PerformClick(); // hacky way to accomplish properly updating the Checked property at startup
+            runAtStartupItem.PerformClick();
             ret.MenuItems.Add(runAtStartupItem);
 
-            ret.MenuItems.Add(new MenuItem("Exit", Exit));
+            ret.MenuItems.Add(new MenuItem("Exit", Exit)); // add Exit MenuItem
 
             return ret;
         }
 
+        // toggles whether the program will run at startup or not
         private void RunAtStartupItem_Click(object sender, EventArgs e)
         {
             RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
@@ -132,13 +135,11 @@ namespace PowerPlanToggler
 
         private void Pmi_Click(object sender, EventArgs e)
         {
-
             PowerMenuItem pmi = sender as PowerMenuItem;
 
             foreach (MenuItem item in trayIcon.ContextMenu.MenuItems)
-            {
                 item.Checked = false;
-            }
+           
             trayIcon.ContextMenu.MenuItems.Find(pmi.PlanName, false)[0].Checked = true;
 
             System.Diagnostics.Process process = new System.Diagnostics.Process();
